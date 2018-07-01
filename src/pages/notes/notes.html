@@ -1,0 +1,17 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Notes</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="note" *ngFor="let note of notes" [style.backgroundColor]="note.label">
+		<h3> {{ note.title }} </h3>
+		<div class="note-content">
+			{{ note.content }}
+		</div>
+	</div>
+</ion-content>

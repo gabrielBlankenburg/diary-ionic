@@ -1,0 +1,16 @@
+page-home {
+	h3 {
+		margin-top: 5% !important;
+	}
+
+	ion-grid {
+		height: 85%;
+		ion-row {
+			height: 100%;
+
+			button {
+				margin-bottom: 3% !important;
+			}
+		}
+	}
+}
