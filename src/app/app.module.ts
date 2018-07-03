@@ -8,6 +8,7 @@ import { NewNotePage } from '../pages/newNote/newNote';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { HomePage } from '../pages/home/home';
+import { NotePage } from '../pages/note/note';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,6 +23,7 @@ import { HTTP } from '@ionic-native/http';
     LoginPage,
     RegisterPage,
     HomePage,
+    NotePage,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { HTTP } from '@ionic-native/http';
     LoginPage,
     RegisterPage,
     HomePage,
+    NotePage,
   ],
   providers: [
     StatusBar,

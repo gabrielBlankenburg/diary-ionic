@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Nav } from 'ionic-angular';
 
 import { Connection } from '../../helper/connection';
+
+import { NotePage } from '../note/note';
 
 @Component({
   selector: 'page-notes',
@@ -11,7 +13,7 @@ import { Connection } from '../../helper/connection';
 export class NotesPage {
 	private notes;
 
-	constructor(public navCtrl: NavController) {
+	constructor(public navCtrl: NavController, public nav: Nav) {
 		this.getNotes();
 	}
 
@@ -20,5 +22,9 @@ export class NotesPage {
 			this.notes = json;
 		}
 		Connection.getNotes(cb);
+	}
+
+	private openNote(id) {
+		this.nav.setRoot(NotePage, {id: id});
 	}
 }
